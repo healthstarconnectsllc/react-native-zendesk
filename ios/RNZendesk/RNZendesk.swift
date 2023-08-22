@@ -59,11 +59,16 @@ class RNZendesk: RCTEventEmitter {
     }
     
     // MARK: - UI Methods
-    
     @objc(showHelpCenter:)
     func showHelpCenter(with options: [String: Any]) {
         DispatchQueue.main.async {
             let hcConfig = HelpCenterUiConfiguration()
+
+            if let category = options["categoryId"] as? NSNumber {
+                hcConfig.groupType = .category
+                let doubleValue: Double = 360004486154
+                hcConfig.groupIds = [category, NSNumber(value: doubleValue)]
+            }
 
             if let hideContactSupport = options["hideContactSupport"] as? Bool {
                 hcConfig.showContactOptions = !hideContactSupport
