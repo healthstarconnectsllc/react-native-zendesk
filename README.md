@@ -15,3 +15,7 @@ react-native link react-native-zendesk
 
 ## Getting Started
 API is very small and can be seen [here](https://github.com/dcvz/react-native-zendesk/blob/master/src/index.ts)
+
+
+## EXTRA STEP ANDROID
+You need to add `<style name="ZendeskHelpCenterTheme" parent="ZendeskSdkTheme.Light"></style>` in your `res/values/styles.xml`
