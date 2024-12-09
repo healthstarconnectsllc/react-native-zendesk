@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "types": ["react-native", "react"],
     "lib": ["es2017"],
     "module": "commonjs",
     "jsx": "react",
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
